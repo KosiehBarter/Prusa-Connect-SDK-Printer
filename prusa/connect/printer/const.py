@@ -223,6 +223,8 @@ class CapabilityType(Enum):
 
 class TriggerScheme(Enum):
     """On which event to trigger a photo - Enum"""
+    ONE_SEC = "Every 1 second"
+    TWO_SEC = "Every 2 seconds"
     TEN_SEC = "Every 10 seconds"
     THIRTY_SEC = "Every 30 seconds"  # Default
     SIXTY_SEC = "Every 60 seconds"
@@ -232,6 +234,8 @@ class TriggerScheme(Enum):
 
 
 TRIGGER_SCHEME_TO_SECONDS = {
+    TriggerScheme.ONE_SEC: 1,
+    TriggerScheme.TWO_SEC: 2,
     TriggerScheme.TEN_SEC: 10,
     TriggerScheme.THIRTY_SEC: 30,
     TriggerScheme.SIXTY_SEC: 60,
